@@ -201,7 +201,7 @@ elif menu == "Projet":
   # Charger une image à partir d'un fichier local
         image = "Happiness.png"
   # Afficher l'image sur l'application Streamlit
-        st.image(image, caption='Les clés du bonheur', use_column_width=True)
+        st.image(image, caption='Les clés du bonheur', use_container_width=True)
 
         st.write("## Introduction")
         st.write ("Ce projet vise à conduire une analyse approfondie des données du World Happiness Report afin d'évaluer le bonheur des pays du monde en utilisant une variété d'indicateurs socio-économiques tels que la santé, la corruption, l'économie et l'espérance de vie.")
