@@ -4,6 +4,7 @@ from PIL import Image
 #Importation de packages
 import pandas as pd
 import numpy as np
+
 import matplotlib.pyplot as plt
 import seaborn as sns
 from sklearn.impute import KNNImputer
