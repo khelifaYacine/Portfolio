@@ -873,96 +873,133 @@ elif menu == "Projet : Analyse Power BI":
 
 elif menu == "Analyse Looker Studio":
     # Titre principal
-    st.title("📊 Projet : Analyse Looker Studio - Tableau de Performance")
-
-    # Vidéo globale et présentation
-    st.video("Vidéo sans titre (6).mp4")  # Vidéo fournie
+    st.title("📊 Projet : Analyse Looker Studio - Rapport Global")
+    st.video("Vidéo sans titre (6).mp4")  # Vidéo principale
     st.markdown("""
     ### Introduction
-    Ce tableau de bord Looker Studio fournit une vue analytique des données globales avec pour objectifs :
-    - Comprendre les dynamiques globales sur les 25 dernières années.
-    - Analyser les performances des régions et des pays.
-    - Identifier les leviers d'action pour améliorer les indicateurs clés.
+    Ce tableau de bord couvre 25 années de données mondiales, avec une analyse approfondie des tendances démographiques et des infrastructures globales :
+    - **Population mondiale** : Répartition par année, genre, et pays.
+    - **Accès aux infrastructures** : Électricité et internet.
+    - **Économie** : Produit Intérieur Brut (PIB) par habitant.
+    - **Comparaison régionale** : Performance des pays et continents.
+
+    Chaque page propose une analyse détaillée pour tirer des insights exploitables.
     """)
 
-    # Section 1 : Vue d'ensemble
-    st.header("1️⃣ Vue d'ensemble des données globales")
-    st.image("Projet_Lokker (1).png", caption="Données globales de la population")
-    st.markdown("""
-    **Analyse :**
-    - La population mondiale est estimée à 7,7 milliards en 2019, avec une répartition équivalente entre hommes et femmes.
-    - Les données montrent une forte concentration de la population dans des régions comme la Chine et l'Inde.
+    # Menu pour naviguer entre les pages
+    pages = [
+        "Vue globale : Population mondiale",
+        "Indicateurs socio-économiques",
+        "Évolution temporelle",
+        "Comparaison par continent",
+        "Liste des pays par région",
+        "Synthèse"
+    ]
+    page = st.sidebar.radio("Naviguez entre les pages :", pages)
 
-    **Insights tirés :**
-    - Les pays les plus peuplés nécessitent des infrastructures robustes pour soutenir leur croissance.
-    - Une augmentation régulière de la population dans les zones à forte densité.
+    # Page 1 : Vue globale : Population mondiale
+    if page == "Vue globale : Population mondiale":
+        st.header("📍 Vue Globale : Population Mondiale")
+        st.image("Projet_Lokker (1).png", caption="Population mondiale (2019)")
+        st.markdown("""
+        **Analyse :**
+        - La population mondiale atteint 7,7 milliards en 2019.
+        - La répartition est homogène entre hommes et femmes, mais des disparités sont visibles entre continents.
+        - La carte montre une concentration majeure en Asie (Chine, Inde).
 
-    **Suggestions :**
-    - Renforcer les investissements dans les infrastructures essentielles (électricité, internet) pour ces régions.
-    - Étudier l’impact des variations démographiques sur les services publics.
-    """)
+        **Insights tirés :**
+        - Les régions les plus peuplées nécessitent des infrastructures robustes (santé, éducation, transport).
+        - La croissance démographique pose des défis spécifiques, notamment dans les pays en développement.
 
-    # Section 2 : Répartition des statistiques globales
-    st.header("2️⃣ Répartition statistique par région")
-    st.image("Projet_Lokker (2).png", caption="Répartition statistique globale")
-    st.markdown("""
-    **Analyse :**
-    - Les graphiques montrent une évolution équilibrée entre l'accès à l'électricité et l'utilisation d'internet.
-    - Certaines régions, comme l'Afrique, accusent un retard significatif.
+        **Suggestions :**
+        - Mettre en place des politiques adaptées pour gérer l'urbanisation rapide.
+        - Développer des services publics pour répondre aux besoins croissants.
+        """)
 
-    **Insights tirés :**
-    - Les régions développées (Europe, Amériques) atteignent presque 100 % d'accès à l'électricité et internet.
-    - L'Afrique reste en retard avec seulement 43,95 % d'accès à l'électricité.
+    # Page 2 : Indicateurs socio-économiques
+    elif page == "Indicateurs socio-économiques":
+        st.header("📊 Indicateurs Socio-Économiques")
+        st.image("Projet_Lokker (2).png", caption="Accès à l'électricité et Internet par région")
+        st.markdown("""
+        **Analyse :**
+        - L'accès à l'électricité atteint 99 % dans les régions développées (Europe, Amériques).
+        - L'utilisation d'internet progresse, mais reste faible en Afrique et certaines parties d'Asie.
+        - Le PIB par habitant montre des écarts significatifs entre les continents.
 
-    **Suggestions :**
-    - Mettre en place des programmes pour accélérer l'accès aux infrastructures dans les régions sous-développées.
-    - Exploiter des partenariats public-privé pour développer des solutions durables.
-    """)
+        **Insights tirés :**
+        - Les infrastructures de base (électricité, internet) sont essentielles pour soutenir le développement économique.
+        - Les pays africains nécessitent une attention prioritaire pour combler le fossé numérique.
 
-    # Section 3 : Analyse temporelle
-    st.header("3️⃣ Évolution des indicateurs temporels")
-    st.image("Projet_Lokker (3).png", caption="Indicateurs sur 25 ans par région")
-    st.markdown("""
-    **Analyse :**
-    - Les données temporelles montrent une progression régulière de l'accès à l'électricité et à internet.
-    - Des pics spécifiques sont visibles pour certaines régions durant certaines années.
+        **Suggestions :**
+        - Augmenter les investissements dans les infrastructures en Afrique et Asie du Sud.
+        - Favoriser l'adoption de technologies innovantes pour réduire les coûts d'accès.
+        """)
 
-    **Insights tirés :**
-    - Une croissance continue de l'accès aux infrastructures, mais des disparités persistantes selon les régions.
-    - Les régions à forte population montrent une corrélation directe avec l'augmentation de l'accès.
+    # Page 3 : Évolution temporelle
+    elif page == "Évolution temporelle":
+        st.header("📅 Évolution Temporelle")
+        st.image("Projet_Lokker (3).png", caption="Évolution des indicateurs sur 25 ans")
+        st.markdown("""
+        **Analyse :**
+        - Les 25 dernières années montrent une progression constante de l'accès à l'électricité et à Internet.
+        - Les régions développées atteignent presque 100 %, tandis que d'autres progressent lentement.
 
-    **Suggestions :**
-    - Renforcer les investissements dans les zones où la progression est lente.
-    - Étudier les causes des pics pour ajuster les stratégies régionales.
-    """)
+        **Insights tirés :**
+        - La croissance est inégale, avec des disparités marquées entre continents.
+        - Les régions à forte population urbaine montrent une amélioration rapide des infrastructures.
 
-    # Section 4 : Comparaison des régions et des segments
-    st.header("4️⃣ Comparaison des performances par région")
-    st.image("Projet_Lokker (4).png", caption="Comparaison par segment")
-    st.markdown("""
-    **Analyse :**
-    - Les régions comme l'Europe et les Amériques dominent en termes d'accès aux services essentiels.
-    - Des écarts significatifs subsistent entre les régions les plus performantes et les autres.
+        **Suggestions :**
+        - Renforcer les politiques de développement ciblées pour accélérer la progression.
+        - Promouvoir des initiatives de collaboration internationale.
+        """)
 
-    **Insights tirés :**
-    - Les régions sous-performantes nécessitent une attention prioritaire pour réduire l'écart.
-    - Les bonnes pratiques des régions performantes peuvent être adaptées aux autres.
+    # Page 4 : Comparaison par continent
+    elif page == "Comparaison par continent":
+        st.header("🌍 Comparaison par Continent")
+        st.image("Projet_Lokker (4).png", caption="Comparaison des continents")
+        st.markdown("""
+        **Analyse :**
+        - Les régions développées (Europe, Amériques) surpassent les autres en termes d'accès à l'électricité, internet et PIB.
+        - L'Afrique reste la région la plus sous-développée, mais montre des signes de progression.
 
-    **Suggestions :**
-    - Établir des plans d'action ciblés pour chaque région en fonction de leurs besoins spécifiques.
-    - Capitaliser sur les succès des régions leaders pour développer des stratégies globales.
-    """)
+        **Insights tirés :**
+        - La disparité entre continents souligne le besoin de politiques adaptées à chaque région.
+        - Les ressources doivent être allouées en fonction des besoins spécifiques des pays.
 
-    # Section 5 : Synthèse et recommandations
-    st.header("5️⃣ Synthèse et recommandations")
-    st.image("Projet_Lokker (5).png", caption="Synthèse des données globales")
-    st.markdown("""
-    ### Points clés
-    - La progression mondiale des infrastructures est visible, mais les écarts régionaux restent importants.
-    - Les zones à forte densité démographique nécessitent un soutien accru.
+        **Suggestions :**
+        - Partager les bonnes pratiques des régions avancées avec les autres continents.
+        - Établir des priorités claires pour chaque continent.
+        """)
 
-    ### Recommandations stratégiques
-    - **Accélérer les investissements :** Dans les régions comme l'Afrique pour combler le fossé infrastructurel.
-    - **Renforcer les partenariats :** Publics et privés pour développer des solutions innovantes.
-    - **Suivi en temps réel :** Développer des outils de monitoring pour évaluer les progrès et ajuster les stratégies.
-    """)
+    # Page 5 : Liste des pays par région
+    elif page == "Liste des pays par région":
+        st.header("📋 Liste des Pays par Région")
+        st.image("Projet_Lokker (5).png", caption="Répartition des pays par région")
+        st.markdown("""
+        **Analyse :**
+        - La segmentation des pays par continent permet une comparaison régionale précise.
+        - Certaines régions affichent une hétérogénéité interne importante.
+
+        **Insights tirés :**
+        - Les pays leaders dans chaque région peuvent être des modèles pour les autres.
+        - La diversité des besoins nécessite des approches spécifiques.
+
+        **Suggestions :**
+        - Établir des collaborations régionales pour partager les ressources et l'expertise.
+        - Adapter les stratégies nationales aux besoins locaux.
+        """)
+
+    # Page 6 : Synthèse
+    elif page == "Synthèse":
+        st.header("📜 Synthèse et Recommandations")
+        st.image("Projet_Lokker (6).png", caption="Synthèse globale")
+        st.markdown("""
+        ### Points Clés :
+        - La population mondiale continue de croître, entraînant des défis pour les infrastructures.
+        - Les disparités régionales nécessitent des actions ciblées et adaptées.
+
+        ### Recommandations :
+        - **Investissements ciblés :** Prioriser les régions sous-développées.
+        - **Collaboration internationale :** Renforcer les partenariats entre régions.
+        - **Technologies innovantes :** Exploiter les solutions modernes pour réduire les écarts.
+        """)
