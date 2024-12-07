@@ -28,7 +28,7 @@ df2 = pd.read_csv("climate_change_indicators.csv", sep=";")
 
 # ---------------- Menu principal ----------------
 st.sidebar.title("🌟 Menu Principal")
-menu = st.sidebar.radio("📌 Naviguer vers :", ["CV", "Projet"])
+menu = st.sidebar.radio("📌 Naviguer vers :", ["CV", "Projet", "Projet : Analyse Power BI"])
 
 # ---------------- Section CV ----------------
 if menu == "CV":
@@ -770,3 +770,99 @@ elif menu == "Projet":
 
         with open("Rapport_Projet_Analyse_Bonheur.pdf", "rb") as file:
             st.download_button(label="📥 Télécharger le Rapport du Projet (PDF)", data=file, file_name="Rapport_Projet_Analyse_Bonheur.pdf", mime="application/pdf")
+
+
+elif menu == "Projet : Analyse Power BI":
+    # Titre principal
+    st.title("📊 Projet : Analyse Power BI - Centre d'Appels")
+
+    # Vidéo globale et présentation
+    st.video("Enregistrement 2024-12-06 081209.mp4")  # Vidéo fournie
+    st.markdown("""
+    ### Présentation globale
+    Ce tableau de bord Power BI analyse les performances d’un centre d’appels, avec pour objectifs :
+    - Identifier les périodes de surcharge et les goulots d’étranglement.
+    - Évaluer les performances des agents.
+    - Proposer des axes d’amélioration pour optimiser les délais d’attente et les ressources disponibles.
+    """)
+
+    # Section 1 : Vue d'ensemble
+    st.header("1️⃣ Vue d'ensemble des indicateurs clés")
+    st.image("key_frame_1.png", caption="Indicateurs clés du centre d'appels")
+    st.markdown("""
+    **Interprétation :**
+    - **Total des appels :** Le centre d'appels a traité un volume global de X appels sur une période donnée.
+    - **Taux d'abandon :** Un taux significatif est observé pendant les heures de pointe, indiquant une surcharge des équipes.
+
+    **Insights tirés :**
+    - Les périodes de surcharge nécessitent une attention particulière pour éviter une augmentation des abandons.
+
+    **Suggestions :**
+    - Optimiser les plannings pour ajuster les ressources humaines pendant les pics d'activité.
+    - Mettre en place un système d’automatisation pour traiter les demandes simples et réduire la charge sur les agents.
+    """)
+
+    # Section 2 : Analyse temporelle
+    st.header("2️⃣ Analyse temporelle des volumes d'appels")
+    st.image("key_frame_2.png", caption="Volumes d'appels par période")
+    st.markdown("""
+    **Interprétation :**
+    - Les heures de pointe se concentrent entre 10 h - 12 h et 16 h - 18 h.
+    - Une baisse notable des appels est constatée les week-ends.
+
+    **Insights tirés :**
+    - Les pics d'activité nécessitent une réallocation stratégique des ressources.
+    - Les week-ends offrent une opportunité de réorganiser les tâches ou d'optimiser les temps de formation des agents.
+
+    **Suggestions :**
+    - Renforcer les équipes pendant les heures de pointe.
+    - Planifier des activités annexes ou de formation pendant les périodes creuses.
+    """)
+
+    # Section 3 : Performances des agents
+    st.header("3️⃣ Performances des agents")
+    st.image("key_frame_3.png", caption="Comparaison des performances des agents")
+    st.markdown("""
+    **Interprétation :**
+    - Certains agents atteignent des performances élevées, avec un faible temps de traitement par appel.
+    - D'autres agents montrent une variabilité significative, avec des durées d’appel plus longues que prévu.
+
+    **Insights tirés :**
+    - Les agents les plus performants contribuent à une gestion plus rapide des appels, réduisant les délais d’attente globaux.
+    - Les agents en difficulté impactent la fluidité globale du service.
+
+    **Suggestions :**
+    - Identifier les bonnes pratiques des agents performants et les partager via des formations internes.
+    - Organiser des sessions de coaching ciblées pour aider les agents en difficulté à atteindre des performances optimales.
+    """)
+
+    # Section 4 : Qualité du service et délais
+    st.header("4️⃣ Qualité du service et respect des délais")
+    st.image("key_frame_4.png", caption="Temps moyen d'attente et SLA")
+    st.markdown("""
+    **Interprétation :**
+    - Le temps moyen d’attente dépasse fréquemment X secondes pendant les heures de pointe.
+    - Les abandons augmentent significativement après une attente prolongée de Y secondes.
+
+    **Insights tirés :**
+    - Les délais d’attente prolongés affectent directement la fluidité du service.
+    - Les pics d’activité entraînent des goulots d’étranglement dans la prise en charge.
+
+    **Suggestions :**
+    - Réduire les délais d’attente en ajustant les plannings des équipes.
+    - Mettre en place un système d’appel automatisé pour informer les clients de leur position dans la file.
+    """)
+
+    # Section 5 : Perspectives et améliorations
+    st.header("5️⃣ Perspectives et améliorations")
+    st.markdown("""
+    ### Axes d'amélioration
+    - **Automatisation des processus simples :** Bots ou FAQ automatisées pour traiter les demandes courantes.
+    - **Prédiction des volumes d’appels :** Utiliser des modèles prédictifs basés sur les données historiques pour anticiper les besoins.
+    - **Monitoring en temps réel :** Développer un tableau de bord interactif accessible aux responsables pour suivre les KPI en direct.
+
+    ### Étapes futures
+    - Formation continue des agents sur la gestion efficace des appels.
+    - Optimisation des processus internes pour améliorer les performances globales.
+    - Développement d’une stratégie de rétention des agents performants pour maintenir un haut niveau de qualité.
+    """)
