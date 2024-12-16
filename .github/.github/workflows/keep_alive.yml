@@ -1,0 +1,26 @@
+name: Keep Alive
+
+on:
+  schedule:
+    - cron: "*/15 * * * *"  # Exécuter toutes les 15 minutes
+  workflow_dispatch:  # Permet d'exécuter manuellement si nécessaire
+
+jobs:
+  ping:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3  # Télécharge le dépôt
+
+      - name: Set up Python
+        uses: actions/setup-python@v3
+        with:
+          python-version: 3.x  # Version Python
+
+      - name: Install dependencies
+        run: |
+          pip install requests  # Installer requests
+
+      - name: Run ping script
+        run: python keep_alive.py  # Exécuter le script
