@@ -178,8 +178,8 @@ if menu == "CV":
         """)
 
     # Lien de téléchargement du CV
-        with open("CV Yacine KHELIFA Data Analyst.pdf", "rb") as file:
-          st.download_button(label="📥 Télécharger le CV (PDF)", data=file, file_name="CV Yacine KHELIFA Data Analyst.pdf", mime="application/pdf")
+        with open("Mon CV Yacine KHELIFA.pdf", "rb") as file:
+          st.download_button(label="📥 Télécharger le CV (PDF)", data=file, file_name="Mon CV Yacine KHELIFA.pdf", mime="application/pdf")
     
 
 # ---------------- Section Projet ----------------
