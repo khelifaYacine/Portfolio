@@ -69,9 +69,9 @@ if menu == "CV":
         st.header("Expériences Professionnelles")
         st.markdown("""
         ### Data Analyst - KabTelecom, Paris (Depuis 09.2024)    
-        - 
-        -
-        -        
+        - Développement de tableaux de bord interactifs dansPower BI pour suivre la progression du déploiement de lafi bre optique.
+        - Automatisation des rapports hebdomadaires pour lesclients tels qu'Orange et Bouygues Télécom, permettant ungain de temps de 20 % dans la production de livrables.
+        - Collaboration avec des équipes techniques pour analyseret optimiser les indicateurs clés de performance (KPI).       
         ### Bénévole - Reclaim Finance, Paris (Depuis 10.2024)
         - Recherche et collecte de données sur des sites identifiés.  
         - Consolidation et traitement de données au format Excel.  
