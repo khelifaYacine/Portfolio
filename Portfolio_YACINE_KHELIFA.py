@@ -68,6 +68,10 @@ if menu == "CV":
     elif tab_selected == "📂 Expériences":
         st.header("Expériences Professionnelles")
         st.markdown("""
+        ### Data Analyst - KabTelecom, Paris (Depuis 09.2024)    
+        - 
+        -
+        -        
         ### Bénévole - Reclaim Finance, Paris (Depuis 10.2024)
         - Recherche et collecte de données sur des sites identifiés.  
         - Consolidation et traitement de données au format Excel.  
