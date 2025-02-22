@@ -52,9 +52,9 @@ if menu == "CV":
         Je pourrais vous raconter ma passion pour la data, mes compétences en Python, SQL et Power BI, ou encore mon envie d’apprendre toujours plus, notamment en Machine Learning et IA. Mais je préfère aller droit au but.
 
         Vous cherchez un Data Analyst capable de transformer vos données en valeur ? Parlons-en. J’ai déjà mené plusieurs projets :
-        ✅ Un projet fil rouge en Python, de A à Z, jusqu’à la prédiction et l’évaluation des modèles.
-        ✅ Un tableau de bord Power BI optimisant l’analyse d’un centre d’appel.
-        ✅ Une étude de données pour Studio Lokker.
+        - Un projet fil rouge en Python, de A à Z, jusqu’à la prédiction et l’évaluation des modèles.
+        - Un tableau de bord Power BI optimisant l’analyse d’un centre d’appel.
+        - Une étude de données pour Studio Lokker.
 
         Et bien d’autres sur [GitHub / Kaggle / Portfolio - ci-joint].
 
