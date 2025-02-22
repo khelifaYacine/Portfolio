@@ -45,22 +45,25 @@ if menu == "CV":
     if tab_selected == "🏆 Lettre de Motivation":
         st.header("Lettre de Motivation")
         st.write("""
-        **Objet** : Candidature au poste de Data Analyst
+        **Objet** : Et si nous parlions impact et data ?
 
-        Madame, Monsieur,  
-        Passionné par l’analyse de données et diplômé d’une formation spécialisée chez Datascientest.com, 
-        je maîtrise des outils comme Python, SQL et Power BI, que j’ai utilisés dans plusieurs projets 
-        pour transformer des données complexes en insights exploitables.  
+        Bonjour,
 
-        Mon expérience en suivi de raccordement de la fibre optique m’a permis de développer 
-        des tableaux de bord interactifs et des indicateurs clés de performance, améliorant la prise de décision 
-        et la satisfaction client.  
+        Je pourrais vous raconter ma passion pour la data, mes compétences en Python, SQL et Power BI, ou encore mon envie d’apprendre toujours plus, notamment en Machine Learning et IA. Mais je préfère aller droit au but.
 
-        Rejoindre votre équipe serait une opportunité de mettre à profit mes compétences techniques et 
-        humaines pour contribuer à vos projets innovants. Je suis convaincu que ma polyvalence et 
-        ma capacité d’adaptation seront des atouts précieux pour votre organisation.
+        Vous cherchez un Data Analyst capable de transformer vos données en valeur ? Parlons-en. J’ai déjà mené plusieurs projets :
+        ✅ Un projet fil rouge en Python, de A à Z, jusqu’à la prédiction et l’évaluation des modèles.
+        ✅ Un tableau de bord Power BI optimisant l’analyse d’un centre d’appel.
+        ✅ Une étude de données pour Studio Lokker.
 
-        Cordialement,  
+        Et bien d’autres sur [GitHub / Kaggle / Portfolio - ci-joint].
+
+        Mon objectif est simple : apprendre, contribuer et avoir un impact. J’ai même fait du bénévolat dans plusieurs associations pour perfectionner mes compétences.
+
+        Vous voulez voir ce que je peux apporter à votre entreprise ? Je vous propose d’en discuter lors d’un entretien. Concrètement.
+
+        À bientôt,
+
         **Yacine KHELIFA**
         """)
 
